@@ -36,6 +36,6 @@ public class Main {
 
 
         }
-        company.PayTaxes();
+        company.payTaxes();
     }
 }

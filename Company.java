@@ -1,10 +1,10 @@
 import taxes.TaxSystem;
 
 public class Company {
-    String title;
-    int debit;
-    int credit;
-    TaxSystem taxSystem = new taxes.TaxSystem();
+    private  String title;
+    private int debit;
+    private  int credit;
+    private TaxSystem taxSystem;
 
     public Company(String title, taxes.TaxSystem taxSystem) {
         this.title = title;
@@ -29,7 +29,7 @@ public class Company {
 
     }
 
-    public void PayTaxes() {
+    public void payTaxes() {
         int taxPaid = taxSystem.calcTaxFor(debit, credit);
         System.out.println(" Компания " + this.title + " уплатила налог в размере " + taxPaid + " руб.");
         debit = 0;
